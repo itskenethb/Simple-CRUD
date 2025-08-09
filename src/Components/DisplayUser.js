@@ -10,8 +10,8 @@ export default function DisplayUser({ onClose }) {
   // Fetch users either all or filtered by search
   const fetchUsers = (query = "") => {
     const url = query
-      ? `http://localhost:5000/search_users?query=${encodeURIComponent(query)}`
-      : "http://localhost:5000/display_users";
+      ? `http://127.0.0.1:5000/search_users?query=${encodeURIComponent(query)}`
+      : "http://127.0.0.1:5000/display_users";
 
     fetch(url)
       .then((res) => res.json())
