@@ -21,9 +21,6 @@ def get_db_connection():
         password=DB_PASS
     )
 
-from psycopg2 import errorcodes
-from psycopg2.errors import IntegrityError
-
 @app.route("/add_user", methods=['POST'])
 def add_user():
     data = request.get_json()
