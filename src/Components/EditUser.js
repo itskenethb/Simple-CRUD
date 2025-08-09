@@ -71,7 +71,7 @@ export default function EditUserButton({ userId, currentName, currentAddress, on
       if (confirmResult.isConfirmed) {
         try {
           const response = await fetch(
-            `http://localhost:5000/edit_user/${userId}`,
+            `http://127.0.0.1:5000/edit_user/${userId}`,
             {
               method: "PUT",
               headers: { "Content-Type": "application/json" },
