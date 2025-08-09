@@ -13,7 +13,7 @@ export default function DeleteUserButton({ userId, onDeleted }) {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete_user/${userId}`, {
+        fetch(`http://127.0.0.1:5000/delete_user/${userId}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
